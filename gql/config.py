@@ -15,7 +15,7 @@ class Config:
 
     @classmethod
     def load(cls: Type[ConfigT], filename: str) -> ConfigT:
-        with open(filename, 'r') as fin:
+        with open(filename) as fin:
             json_str = fin.read()
             return cls.from_json(json_str)  # pylint:disable=no-member
 

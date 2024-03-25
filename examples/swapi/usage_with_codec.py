@@ -1,5 +1,3 @@
-# -*- coding: gql -*-
-
 GET_FILM = gql'''
     query GetFilm($theFilmID: ID!) {
       film(id: $theFilmID) {

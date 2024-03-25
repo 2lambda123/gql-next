@@ -14,7 +14,7 @@ def load_introspection_from_server(url):
 
 
 def load_introspection_from_file(filename):
-    with open(filename, 'r') as fin:
+    with open(filename) as fin:
         return json.load(fin)
 
 
