@@ -1,5 +1,3 @@
-# coding: gql
-
 # pylint:disable=no-member,unused-import
 QUERY = gql"""
 query HelloQuery {
@@ -14,5 +12,5 @@ def main():
     print(result)
     print(result.data.hello)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
