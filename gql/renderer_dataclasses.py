@@ -92,7 +92,7 @@ class DataclassesRenderer:
         buffer.write('')
 
     def __render_object(self, parsed_query: ParsedQuery, buffer: CodeChunk, obj: ParsedObject):
-        class_parents = '' if not obj.parents else f'({", ".join(obj.parents)})'
+        class_parents = '' if not obj.parents else f'({', '.join(obj.parents)})'
 
         buffer.write('@dataclass_json')
         buffer.write('@dataclass')
@@ -164,7 +164,7 @@ class DataclassesRenderer:
         if not var.nullable:
             return f'{var.name}: {var.type}'
 
-        return f'{var.name}: {var.type} = {var.default_value or "None"}'
+        return f'{var.name}: {var.type} = {var.default_value or 'None'}'
 
     @staticmethod
     def __render_field(parsed_query: ParsedQuery, buffer: CodeChunk, field: ParsedField):

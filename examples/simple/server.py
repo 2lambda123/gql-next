@@ -4,7 +4,7 @@ from flask import Flask
 
 class Query(graphene.ObjectType):
     # pylint:disable=no-self-use
-    hello = graphene.String(argument=graphene.String(default_value="stranger"))
+    hello = graphene.String(argument=graphene.String(default_value='stranger'))
 
     def resolve_hello(self, _, argument):
         return 'Hello ' + argument
