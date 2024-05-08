@@ -62,7 +62,7 @@ def process_file(filename: str, parser: QueryParser, renderer: DataclassesRender
     target_filename = root + '.py'
 
     click.echo(f'Parsing {filename} ... ', nl=False)
-    with open(filename, 'r') as fin:
+    with open(filename) as fin:
         query = fin.read()
         try:
             parsed = parser.parse(query)

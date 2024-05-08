@@ -1,5 +1,3 @@
-# coding: gql
-
 # pylint:disable=no-member,unused-import
 QUERY = gql"""
 query HelloQuery {
